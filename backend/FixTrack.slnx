@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FixTrack.API/FixTrack.API.csproj" Id="68a83a96-6b37-451c-99a1-8f39c670ec53" />
+    <Project Path="src/FixTrack.Application/FixTrack.Application.csproj" Id="e6a6bd7b-3d17-4655-aa09-e3935b3cb8f9" />
+    <Project Path="src/FixTrack.Domain/FixTrack.Domain.csproj" Id="7339f716-c3e9-4897-a398-513736cff495" />
+    <Project Path="src/FixTrack.Infrastructure/FixTrack.Infrastructure.csproj" Id="7e62f670-0b25-48e8-ac11-6d7caf614cee" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FixTrack.Tests/FixTrack.Tests.csproj" Id="a7348dde-8ad7-436d-83af-f33f9e4786fd" />
+  </Folder>
+</Solution>
