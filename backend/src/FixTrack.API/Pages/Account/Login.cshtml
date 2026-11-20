@@ -1,0 +1,54 @@
+﻿@page
+@model FixTrack.API.Pages.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FixTrack - Giriş</title>
+</head>
+<body>
+    <main>
+        <h1>FixTrack</h1>
+        <h2>Hesabına giriş yap</h2>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <p role="alert">@Model.ErrorMessage</p>
+        }
+
+        <form method="post">
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            <div>
+                <label asp-for="Email">E-posta</label>
+                <input asp-for="Email" type="email" required />
+            </div>
+
+            <div>
+                <label asp-for="Password">Şifre</label>
+                <input asp-for="Password" type="password" required />
+            </div>
+
+            <div>
+                <input asp-for="RememberMe" type="checkbox" />
+                <label asp-for="RememberMe">Beni hatırla</label>
+            </div>
+
+            <button type="submit">Giriş Yap</button>
+        </form>
+
+        @if (User.Identity?.IsAuthenticated == true)
+        {
+            <form method="post" asp-page-handler="Logout">
+                <button type="submit">Çıkış Yap</button>
+            </form>
+        }
+    </main>
+</body>
+</html>
